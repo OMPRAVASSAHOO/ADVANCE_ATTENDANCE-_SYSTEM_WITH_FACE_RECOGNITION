@@ -5,13 +5,13 @@ A premium, serverless face-recognition attendance system that runs **100% in the
 ## 🌟 Key Features
 * **Browser-Based Neural Engine**: Uses `face-api.js` (TensorFlow.js) to compute face detections and face embeddings directly on your mobile device's processor.
 * **IndexedDB Local Storage**: Stores your student face prints, daily attendance logs, and cropped photos securely inside the browser's database on your device.
-* **Passcode Gate**: Protected by a secure passcode screen (default is `1234`) to prevent unauthorized access.
+* **Cryptographic Passcode Protection**: Protected by a passcode setup screen. Passcodes are hashed locally using browser-native **SHA-256** encryption and saved strictly in your device's private browser partition. The plain-text password is **never** stored in the source code or uploaded to GitHub.
 * **Premium Client-Side Excel Exports**: Generates styled multi-sheet Excel reports with green/red status highlighting and automated defaulter "Red Lists" (<75% attendance) directly on your device using `ExcelJS`.
 * **Backup & Restore**: Easily download a `.json` backup file of all your data (faces, logs, photos) and restore it on any device to avoid data loss.
 
 ---
 
-## 🚀 How to Set Up on Your GitHub Account (Free & Always Online)
+## 🚀 How to Set Up on Your GitHub Account (Free & Secure)
 
 To access the app on your phone, you can host these files on GitHub Pages for free. This takes less than 2 minutes and requires no technical experience.
 
@@ -25,10 +25,11 @@ To access the app on your phone, you can host these files on GitHub Pages for fr
 ### Step 2: Upload the Files
 1. On your new repository page, click the link that says: **"uploading an existing file"**.
 2. Open your computer's file explorer and navigate to: `D:\advance attendance serverless`
-3. Select and drag all three files:
+3. Select and drag all four files:
    - `index.html`
    - `style.css`
    - `app.js`
+   - `README.md`
 4. Drop them into the GitHub file upload box.
 5. Wait for the files to finish uploading, then click the green **Commit changes** button at the bottom of the page.
 
@@ -46,7 +47,7 @@ To access the app on your phone, you can host these files on GitHub Pages for fr
 ## 📱 Accessing the App on Your Phone
 1. Open Chrome/Safari on your mobile phone.
 2. Enter your live GitHub Pages URL (e.g. `https://<your-username>.github.io/attendance/`).
-3. Enter the passcode: **`1234`** and click **Access System**.
+3. **First-Time Setup**: Since no passcode is stored yet, the app will show a **"CREATE PASSCODE"** screen. Type a strong passcode of your choice and click **Save & Open App**.
 4. The browser will prompt for **Camera Access**. Click **Allow**.
 5. Select or type a class, start the camera, and begin taking attendance!
 
